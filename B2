@@ -1,0 +1,29 @@
+Here is a specification of one function:
+"Looking candidates for new position with two following coditions:
+1. Age: 20 - 55
+2. Experience years: Equal or more than 3 years"
+
+         -             +              -
+Age: ________|___________________|__________
+             20                 55     
+
+              -                  +
+Exp: __________________|__________________
+                       3          
+
+|---Test case ID---|---Test case description-------------------------------|---Steps-----------------|---Expected result---|
+----------------------------------------------------------------------------------------------------------------------------
+|01                |Verify ejection with age <20 and exp <3                |1. Enter age 19 and exp 2|Candidate is rejected|
+|02                |Verify ejection with age <20 and exp >=3               |1. Enter age 19 and exp 3|Candidate is rejected|
+|03                |Verify ejection with age from 20-55 and exp <3         |1. Enter age 20 and exp 2|Candidate is rejected|
+|04                |Verify acception with age from 20-55 and exp >=3       |1. Enter age 20 and exp 3|Candidate is accepted|
+|05                |Verify ejection with age =55 and exp <3                |1. Enter age 55 and exp 2|Candidate is rejected|
+|06                |Verify acception with age =55 and exp >=3              |1. Enter age 55 and exp 3|Candidate is accepted|
+|07                |Verify acception with age >55 and exp >=3              |1. Enter age 56 and exp 3|Candidate is rejected|
+|08                |Verify acception with age >55 and exp <3               |1. Enter age 56 and exp 2|Candidate is rejected|
+|09                |Verify ejection with empty age field and exp <3        |1. Enter exp 2           |Candidate is rejected|
+|10                |Verify ejection with empty age field and exp >=3       |1. Enter exp 3           |Candidate is rejected|
+|11                |Verify ejection with empty exp field and age from 20-55|1. Enter age 20          |Candidate is rejected|
+|12                |Verify ejection with empty exp field and age -55       |1. Enter age 55          |Candidate is rejected|
+|13                |Verify ejection with empty exp field and age <20       |1. Enter age 19          |Candidate is rejected|
+|14                |Verify ejection with empty exp field and age >55       |1. Enter age 56          |Candidate is rejected|

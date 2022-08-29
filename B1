@@ -1,0 +1,13 @@
+Yêu cầu: Trong phần mềm có một trường yêu cầu người dùng nhập một dãy số bất kỳ (giới hạn từ 6-10 ký tự)
+
+            -        +         -
+       ---------|---------|---------
+Dãy số          6         10   
+
+|---Test case ID---|---Test case description---------------------------|---Steps------------------------|---Expected result--------------------------------|
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+|01----------------|Xác nhận hệ thống từ chối dãy số ít hơn 6 ký tự----|1. Nhập:12345-------------------|Hệ thống thông báo: Dãy số không hợp lệ-----------|
+|02----------------|Xác nhận hệ thống chấp nhận dãy số có 6 ký tự------|1. Nhập:123456------------------|Hệ thống thông báo: Dãy số hợp lệ-----------------|
+|03----------------|Xác nhận hệ thống chấp nhận dãy số có 10 ký tự-----|1. Nhập:1234567890--------------|Hệ thống thông báo: Dãy số hợp lệ-----------------|
+|04----------------|Xác nhận hệ thống từ chối dãy số nhiều hơn 10 ký tự|1. Nhập:12345678901-------------|Hệ thống thông báo: Dãy số không hợp lệ-----------|
+|05----------------|Xác nhận hệ thống từ chối trường bỏ trống----------|1. Không nhập giá trị vào trường|Hệ thống thông báo: Trường này không được bỏ trống|
